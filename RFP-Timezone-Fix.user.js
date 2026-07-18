@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         RFP Timezone Fix (Per-Site Exceptions)
 // @namespace    https://github.com/VitaKaninen
-// @version      1.1.0
+// @version      1.2.0
 // @description  Undo LibreWolf's/Firefox's Resist Fingerprinting's UTC timezone spoof on a per-site exception list, so timestamps show your real local time only where you allow it.
+// @author       VitaKaninen
 // @match        *://*/*
 // @grant        GM_setValue
 // @grant        GM_getValue
