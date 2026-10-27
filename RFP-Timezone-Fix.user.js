@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RFP Timezone Fix (Per-Site Exceptions)
 // @namespace    https://github.com/VitaKaninen
-// @version      1.2.0
+// @version      1.3.0
 // @description  Undo LibreWolf's/Firefox's Resist Fingerprinting's UTC timezone spoof on a per-site exception list, so timestamps show your real local time only where you allow it.
 // @author       VitaKaninen
 // @match        *://*/*
@@ -479,6 +479,10 @@
         panel.appendChild(list);
         panel.appendChild(note);
         panel.appendChild(closeBtn);
+        const verLine = document.createElement('div');
+        verLine.textContent = 'v' + ((typeof GM_info !== 'undefined' && GM_info.script && GM_info.script.version) || '?');
+        verLine.style.cssText = 'align-self: flex-end; color: #6c7086; font-size: 11px;';
+        panel.appendChild(verLine);
         overlay.appendChild(panel);
         root.appendChild(overlay);
         document.documentElement.appendChild(host);
